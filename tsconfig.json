@@ -29,7 +29,7 @@
             "@/*": ["src/*"]
         }
     },
-    "include": ["src", "view", "globals.d.ts", "global.d.ts"],
+    "include": ["src", "view", "global.d.ts"],
     "exclude": [
         "node_modules",
         "build",
