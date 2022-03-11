@@ -74,7 +74,7 @@ const viewConfig = {
             {
                 test: /\.css$/i,
                 use: [
-                    miniCssExtractPlugin.loader,
+                    // miniCssExtractPlugin.loader,
                     'css-loader',
                     'postcss-loader',
                 ],
