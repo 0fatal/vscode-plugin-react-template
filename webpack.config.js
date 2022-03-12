@@ -52,12 +52,17 @@ const extensionConfig = {
 
 const viewConfig = {
     entry: './view/index.tsx',
+    optimization: {
+        // 1. 这个配置必须
+        minimize: false,
+    },
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'static/js/[name].js',
         chunkFilename: 'static/js/[name].js',
     },
     mode: 'production',
+    devtool: 'source-map',
     plugins: [
         new miniCssExtractPlugin(),
 
