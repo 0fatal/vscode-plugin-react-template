@@ -51,6 +51,10 @@ export class PreviewPanel {
         PreviewPanel.currentPanel = undefined
     }
 
+    public getWebviewPanel() {
+        return this._panel
+    }
+
     public static revive(panel: vscode.WebviewPanel, extensionUri: vscode.Uri) {
         PreviewPanel.currentPanel = new PreviewPanel(panel, extensionUri)
     }

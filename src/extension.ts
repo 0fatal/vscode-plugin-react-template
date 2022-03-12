@@ -2,6 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode'
 import { PreviewPanel } from './panel/PreviewPanel'
+import { navigateTo } from './utils/msgUtils'
 // import { PreviewPanel } from './panel/PreviewPanel'
 
 // this method is called when your extension is activated
@@ -15,6 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
         }
     )
     PreviewPanel.createOrShow(context.extensionUri, 'template')
+    navigateTo(PreviewPanel.currentPanel!.getWebviewPanel(), '/about')
 }
 
 // this method is called when your extension is deactivated

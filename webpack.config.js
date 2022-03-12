@@ -79,7 +79,7 @@ const viewConfig = {
             {
                 test: /\.css$/i,
                 use: [
-                    // miniCssExtractPlugin.loader,
+                    miniCssExtractPlugin.loader,
                     'css-loader',
                     'postcss-loader',
                 ],
@@ -96,7 +96,7 @@ const viewConfig = {
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
         alias: {
-            '@': path.resolve(__dirname, 'view'),
+            '^': path.resolve(__dirname, 'view'),
         },
     },
 }
